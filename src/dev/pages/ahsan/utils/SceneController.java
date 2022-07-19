@@ -3,9 +3,12 @@ package dev.pages.ahsan.utils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -23,6 +26,7 @@ import java.util.Objects;
  * <br/>
  *
  * @Author: Ahsan Khan
+ * @Version: v 1.1
  * @Github: <a href="https://github.com/Ahsan40">https://github.com/Ahsan40</a>
  * @Contact: <a href="mailto:help.ahsan@gmail.com">help.ahsan@gmail.com</a>
  */
@@ -92,6 +96,7 @@ public class SceneController {
             addConfig(name, scene);
         } catch (IOException e) {
             System.out.println(" - EXCEPTION OCCURRED WHILE ADDING SCENE " + fxml + "!!!");
+            e.printStackTrace();
 //            throw new RuntimeException(e);
         }
     }
@@ -208,12 +213,33 @@ public class SceneController {
     }
 
     /**
-     * Disables the draggable function from scene.
+     * Disables the draggable in scene.
      */
     public void dsDraggable(String name) {
         Scene s = sceneMap.get(name);
         s.setOnMouseDragged(null);
         s.setOnMousePressed(null);
+    }
+
+    /**
+     * Hide the title bar from Stage.
+     */
+    public void hideTitleBar() {
+        this.primaryStage.initStyle(StageStyle.TRANSPARENT);
+    }
+
+    /**
+     * Unhide the title bar from Stage.
+     */
+    public void unHideTitleBar() {
+        this.primaryStage.initStyle(StageStyle.DECORATED);
+    }
+
+    /**
+     * Minimize the app/window
+     */
+    public void minimize() {
+        this.primaryStage.setIconified(true);
     }
 
 
@@ -299,6 +325,19 @@ public class SceneController {
     //    Custom-Setter     //
     //                      //
     //////////////////////////
+    public void setTitle(String title) {
+        this.primaryStage.setTitle(title);
+    }
+
+    public void setIcon(String location) {
+        try {
+            this.primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource(location)).toURI().toString()));
+        } catch (URISyntaxException e) {
+            System.out.println(" - ERROR WHILE SETTING ICON!");
+            e.printStackTrace();
+        }
+    }
+
     public void setCss(String name, String css) {
         cssMap.put(name, css);
         if (primaryStage.getScene() == sceneMap.get(name))
