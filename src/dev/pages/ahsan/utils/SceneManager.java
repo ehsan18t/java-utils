@@ -30,7 +30,7 @@ import java.util.Objects;
  * @Github: <a href="https://github.com/Ahsan40">https://github.com/Ahsan40</a>
  * @Contact: <a href="mailto:help.ahsan@gmail.com">help.ahsan@gmail.com</a>
  */
-public class SceneController {
+public class SceneManager {
     private static double xOffset;
     private static double yOffset;
     private final HashMap<String, Size> sizeMap;
@@ -51,7 +51,7 @@ public class SceneController {
     //   Constructor   //
     //                 //
     /////////////////////
-    public SceneController(Stage stage) {
+    public SceneManager(Stage stage) {
         this.fxmlMap = new HashMap<>();
         this.cssMap = new HashMap<>();
         this.sizeMap = new HashMap<>();
@@ -63,7 +63,7 @@ public class SceneController {
         this.defaultSize = new Size(400, 600);
     }
 
-    public SceneController(Stage stage, String css) {
+    public SceneManager(Stage stage, String css) {
         this(stage);
         this.applyDefaultCSS = true;
         this.primaryCSS = css;
