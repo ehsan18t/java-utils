@@ -10,7 +10,7 @@ Well, recently I were doing some java projects. Oh, boy... there were some thing
 &nbsp;
 &nbsp;
 ## 📜 Features
-- `SceneController` class to manage JavaFX scenes easily.
+- `SceneManager` class to manage JavaFX scenes easily.
 - `FileIO` class to read/write/check serialized objects/files.
 
 &nbsp;
