@@ -410,4 +410,8 @@ public class SceneManager {
     public void setDefaultSize(Size defaultSize) {
         this.defaultSize = defaultSize;
     }
+    
+    public void setDefaultSize(double h, double w) {
+        this.defaultSize = new Size(h, w);
+    }
 }
