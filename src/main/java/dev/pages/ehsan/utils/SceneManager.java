@@ -232,7 +232,7 @@ public class SceneManager {
     }
 
     /**
-     * Unhide the title bar from Stage.
+     * Show the title bar from Stage.
      */
     public void showTitleBar() {
         this.primaryStage.initStyle(StageStyle.DECORATED);

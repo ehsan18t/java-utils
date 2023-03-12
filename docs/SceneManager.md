@@ -11,7 +11,7 @@
 
 - `void add(String name, String fxmlPath)`
   - Adds a scene to the SceneManager with the given name and fxml path. We can switch to the scene with the name later.
-  - Added scene needs to bbe activated with `activate()` method to view it.
+  - Added scene needs to be activated with `activate()` method to view it.
 - `void add(String name, String fxmlPath, double width, double height)`
   - overloaded method of `add()` with the width and height of the scene.
 - `void add(String name, String fxmlPath, Size size)`
@@ -30,7 +30,7 @@
 
 - `void activate(String name)`
   - Activates the scene with the given name.
-  - Can changed to a scene with name if exist.
+  - Can be changed to a scene with name if exists.
 - `void reload(String name)`
   - Reloads/Refreshes the scene with the given name.
 - `remove(String name)`
@@ -60,7 +60,7 @@
 - `void minimize()`
   - Minimizes the current window.
 
-# Getters
+## Getters
 
 - `Stage getPrimaryStage()`
   - Returns the stage of the SceneManager.
