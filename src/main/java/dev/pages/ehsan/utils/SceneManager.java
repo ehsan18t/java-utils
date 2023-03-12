@@ -71,6 +71,24 @@ public class SceneManager {
         this.primaryCSS = css;
     }
 
+    public SceneManager (Stage stage, Size size) {
+        this(stage);
+        this.setDefaultSize(size);
+    }
+
+    public SceneManager (Stage stage, double h, double w) {
+        this(stage, new Size(h, w));
+    }
+
+    public SceneManager (Stage stage, String css, Size size) {
+        this(stage, css);
+        this.setDefaultSize(size);
+    }
+
+    public SceneManager (Stage stage, String css, double h, double w) {
+        this(stage, css, new Size(h, w));
+    }
+
 
     //////////////////////////
     //                      //

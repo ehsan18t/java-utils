@@ -1,9 +1,17 @@
-# Constructor
+# Constructors
 
 - `SceneManager(Stage stage)`
   - Creates a new SceneManager object with the given stage.
 - `SceneManager(Stage stage, String CSS_Path)`
   - Creates a new SceneManager with the given stage and CSS file.
+- `SceneManager(Stage stage, double height, double width)`
+  - Creates a new SceneManager with the given stage, width and height.
+- `SceneManager(Stage stage, Size size)`
+  - Creates a new SceneManager with the given stage and size.
+- `SceneManager(Stage stage, String CSS_Path, double height, double width)`
+  - Creates a new SceneManager with the given stage, CSS file, width and height.
+- `SceneManager(Stage stage, String CSS_Path, Size size)`
+  - Creates a new SceneManager with the given stage, CSS file and size.
 
 # Methods
 
