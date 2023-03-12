@@ -6,6 +6,6 @@ module java.utils {
     opens dev.pages.ehsan.utils to javafx.fxml;
     exports dev.pages.ehsan.utils;
 
-    opens dev.pages.ehsan.example to javafx.fxml;
-    exports dev.pages.ehsan.example;
+    opens example to javafx.fxml;
+    exports example;
 }

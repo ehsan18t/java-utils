@@ -1,4 +1,4 @@
-package dev.pages.ehsan.example;
+package example;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

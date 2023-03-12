@@ -1,4 +1,4 @@
-package dev.pages.ehsan.example;
+package example;
 
 import dev.pages.ehsan.utils.SceneManager;
 import dev.pages.ehsan.utils.Size;
@@ -31,7 +31,7 @@ public class HelloApplication extends Application {
 
         // Creating Scene Manager Objects
         SceneManager sm = new SceneManager(stage);
-//        sm.open("home", "/dev/pages/ehsan/example/hello-view.fxml");
+//        sm.open("home", "/example/hello-view.fxml");
         // Path must be "Path From Source Root"
 
         // DO NOT CONFIGURE PAGE AFTER OPEN
@@ -47,12 +47,12 @@ public class HelloApplication extends Application {
         sm.setDefaultSize (400, 600);
 
         // Add The Scene
-        sm.add("home", "/dev/pages/ehsan/example/hello-view.fxml");
+        sm.add("home", "/example/hello-view.fxml");
 
         // Add/Open Scene with Custom Size
-//        sm.add("home", "/dev/pages/ehsan/example/hello-view.fxml", 400, 600);
+//        sm.add("home", "/example/hello-view.fxml", 400, 600);
         // OR
-//        sm.add("home", "/dev/pages/ehsan/example/hello-view.fxml", new Size(400, 600));
+//        sm.add("home", "/example/hello-view.fxml", new Size(400, 600));
 
         // Change Window Title
         sm.setTitle("Test Application");
