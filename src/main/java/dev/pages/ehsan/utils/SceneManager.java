@@ -1,6 +1,8 @@
 package dev.pages.ehsan.utils;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -410,8 +412,16 @@ public class SceneManager {
     public void setDefaultSize(Size defaultSize) {
         this.defaultSize = defaultSize;
     }
-    
+
     public void setDefaultSize(double h, double w) {
         this.defaultSize = new Size(h, w);
+    }
+
+    public static Stage getStage(Scene sc) {
+        return (Stage) sc.getWindow();
+    }
+
+    public static Stage getStage(ActionEvent ae) {
+        return (Stage) ((Node) ae.getSource()).getScene().getWindow();
     }
 }
