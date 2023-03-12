@@ -27,10 +27,10 @@ import java.util.Objects;
  * <br/>
  * <br/>
  *
- * @Author: Ahsan Khan
- * @Version: v 1.1
- * @Github: <a href="https://github.com/Ahsan40">https://github.com/Ahsan40</a>
- * @Contact: <a href="mailto:help.ahsan@gmail.com">help.ahsan@gmail.com</a>
+ * @Author: Ehsan Khan
+ * @Version: v 1.0.0
+ * @Github: <a href="https://github.com/ehsan18t">https://github.com/ehsan18t</a>
+ * @Contact: <a href="mailto:ehsan18t@gmail.com">ehsan18t@gmail.com</a>
  */
 public class SceneManager {
     private static double xOffset;
@@ -99,7 +99,7 @@ public class SceneManager {
         } catch (IOException e) {
             System.out.println(" - EXCEPTION OCCURRED WHILE ADDING SCENE " + fxml + "!!!");
             e.printStackTrace();
-//            throw new RuntimeException(e);
+            // throw new RuntimeException(e);
         }
     }
 
@@ -143,7 +143,8 @@ public class SceneManager {
     }
 
     /**
-     * Add and activate a scene at the same time with <strong>default scene size (400hx600w)</strong>.
+     * Add and activate a scene at the same time with
+     * <strong>default scene size (400hx600w)</strong>.
      * Scene gets replaced if already exist. Which means page will get
      * refreshed/reload if already exist.
      */
@@ -233,7 +234,7 @@ public class SceneManager {
     /**
      * Unhide the title bar from Stage.
      */
-    public void unHideTitleBar() {
+    public void showTitleBar() {
         this.primaryStage.initStyle(StageStyle.DECORATED);
     }
 
@@ -281,16 +282,15 @@ public class SceneManager {
         this.primaryStage.setResizable(this.resizable);
         manageCSS(name, this.applyDefaultCSS);
         if (this.defaultSceneDraggable)
-            makeDraggable(scene);   // default is on
+            makeDraggable(scene); // default is on
     }
-
 
     //////////////////////////
     //                      //
     //    Custom-Getter     //
     //                      //
     //////////////////////////
-    public String getCss(String name) {
+    public String getCSS(String name) {
         return cssMap.get(name);
     }
 
@@ -310,7 +310,7 @@ public class SceneManager {
         return sizeMap.get(name).getH();
     }
 
-    public double getWeight(String name) {
+    public double getWidth(String name) {
         return sizeMap.get(name).getW();
     }
 
@@ -333,14 +333,16 @@ public class SceneManager {
 
     public void setIcon(String location) {
         try {
-            this.primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource(location)).toURI().toString()));
+            this.primaryStage.getIcons()
+                    .add(new Image(Objects.requireNonNull(getClass()
+                            .getResource(location)).toURI().toString()));
         } catch (URISyntaxException e) {
             System.out.println(" - ERROR WHILE SETTING ICON!");
             e.printStackTrace();
         }
     }
 
-    public void setCss(String name, String css) {
+    public void setCSS(String name, String css) {
         cssMap.put(name, css);
         if (primaryStage.getScene() == sceneMap.get(name))
             reload(name);
@@ -360,10 +362,9 @@ public class SceneManager {
         sizeMap.get(name).setH(h);
     }
 
-    public void setWeight(String name, double w) {
+    public void setWidth(String name, double w) {
         sizeMap.get(name).setW(w);
     }
-
 
     ////////////////////////////
     //                        //
