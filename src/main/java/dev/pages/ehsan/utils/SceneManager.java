@@ -114,7 +114,7 @@ public class SceneManager {
 
             // Setup (CSS and Draggable)
             addConfig(name, scene);
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
             System.out.println(" - EXCEPTION OCCURRED WHILE ADDING SCENE " + fxml + "!!!");
             e.printStackTrace();
             // throw new RuntimeException(e);
