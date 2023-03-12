@@ -17,7 +17,7 @@ Well, recently I were doing some java projects. Oh, boy... there were some thing
 &nbsp;
 ## 💡 How to use?
 - Download/clone the repo.
-- Add package `dev.pages.ahsan.utils` to your project.
+- Add package `dev.pages.ehsan.utils` to your project.
 - Done... Now use it as you like...
 
 **Note:** Example codes and detail explanations will be added later. But there are documentations inside each class. I hope those explanations will be more than enough to start. Best of luck :)
