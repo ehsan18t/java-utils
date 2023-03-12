@@ -1,4 +1,4 @@
-package dev.pages.ahsan.utils;
+package dev.pages.ehsan.utils;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
