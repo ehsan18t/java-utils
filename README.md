@@ -5,7 +5,7 @@
 
 &nbsp;
 ## 💠 Introduction
-Well, recently I were doing some java projects. Oh, boy... there were some things that should've been existed in java by default, but it's not. So I made some classes to make my life easier. ;)
+Well, last year I were doing some java projects. Oh, boy... there are some things that should've been existed in java by default, but it does not. So I made some classes to make my life easier. ;)
 
 &nbsp;
 &nbsp;
@@ -16,11 +16,9 @@ Well, recently I were doing some java projects. Oh, boy... there were some thing
 &nbsp;
 &nbsp;
 ## 💡 How to use?
-- Download/clone the release/repo.
+- Download/clone the repo.
 - Add package `dev.pages.ehsan.utils` to your project.
 - Done... Now use it as you like...
-
-**Note:** More example codes and detail explanations will be added later. But there are documentations inside each class. I hope those explanations will be more than enough to start. Best of luck :)
 
 &nbsp;
 &nbsp;
