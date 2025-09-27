@@ -61,7 +61,7 @@ public class HelloApplication extends Application {
         sm.setIcon("/img/icon.png");
 
         // Hide Title
-        sm.hideTitleBar();
+//        sm.hideTitleBar();
 
         // Activate the scene (MUST ACTIVATE IF ONLY ADDED)
         sm.activate("home");
