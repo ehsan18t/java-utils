@@ -1,27 +1,27 @@
 package dev.pages.ehsan.utils;
 
 public class Size {
-    private double h;
-    private double w;
+    private double height;
+    private double width;
 
-    public Size(double h, double w) {
-        this.h = h;
-        this.w = w;
+    public Size(double height, double width) {
+        this.height = height;
+        this.width = width;
     }
 
-    public double getH() {
-        return h;
+    public double getHeight() {
+        return height;
     }
 
-    public void setH(double h) {
-        this.h = h;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public double getW() {
-        return w;
+    public double getWidth() {
+        return width;
     }
 
-    public void setW(double w) {
-        this.w = w;
+    public void setWidth(double width) {
+        this.width = width;
     }
 }

@@ -76,8 +76,8 @@ public class SceneManager {
         this.setDefaultSize(size);
     }
 
-    public SceneManager (Stage stage, double h, double w) {
-        this(stage, new Size(h, w));
+    public SceneManager (Stage stage, double height, double width) {
+        this(stage, new Size(height, width));
     }
 
     public SceneManager (Stage stage, String css, Size size) {
@@ -85,8 +85,8 @@ public class SceneManager {
         this.setDefaultSize(size);
     }
 
-    public SceneManager (Stage stage, String css, double h, double w) {
-        this(stage, css, new Size(h, w));
+    public SceneManager (Stage stage, String css, double height, double width) {
+        this(stage, css, new Size(height, width));
     }
 
 
@@ -105,7 +105,7 @@ public class SceneManager {
     public void add(String name, String fxml, Size size) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxml)));
-            Scene scene = new Scene(root, size.getW(), size.getH());
+            Scene scene = new Scene(root, size.getWidth(), size.getHeight());
 
             // Store Component
             sizeMap.put(name, size);
@@ -121,8 +121,8 @@ public class SceneManager {
         }
     }
 
-    public void add(String name, String fxml, double h, double w) {
-        add(name, fxml, new Size(h, w));
+    public void add(String name, String fxml, double height, double width) {
+        add(name, fxml, new Size(height, width));
     }
 
     public void add(String name, String fxml) {
@@ -156,8 +156,8 @@ public class SceneManager {
      * Scene gets replaced if already exist. Which means page will get
      * refreshed/reload if already exist.
      */
-    public void open(String name, String fxml, double h, double w) {
-        open(name, fxml, new Size(h, w));
+    public void open(String name, String fxml, double height, double width) {
+        open(name, fxml, new Size(height, width));
     }
 
     /**
@@ -325,11 +325,11 @@ public class SceneManager {
     }
 
     public double getHeight(String name) {
-        return sizeMap.get(name).getH();
+        return sizeMap.get(name).getHeight();
     }
 
     public double getWidth(String name) {
-        return sizeMap.get(name).getW();
+        return sizeMap.get(name).getWidth();
     }
 
     public boolean isResizable() {
@@ -372,16 +372,16 @@ public class SceneManager {
             reload(name);
     }
 
-    public void setSize(String name, double h, double w) {
-        setSize(name, new Size(h, w));
+    public void setSize(String name, double height, double width) {
+        setSize(name, new Size(height, width));
     }
 
     public void setHeight(String name, double h) {
-        sizeMap.get(name).setH(h);
+        sizeMap.get(name).setHeight(h);
     }
 
     public void setWidth(String name, double w) {
-        sizeMap.get(name).setW(w);
+        sizeMap.get(name).setWidth(w);
     }
 
     ////////////////////////////
@@ -432,8 +432,8 @@ public class SceneManager {
         this.defaultSize = defaultSize;
     }
 
-    public void setDefaultSize(double h, double w) {
-        this.defaultSize = new Size(h, w);
+    public void setDefaultSize(double height, double width) {
+        this.defaultSize = new Size(height, width);
     }
 
     public static Stage getStage(Scene sc) {
