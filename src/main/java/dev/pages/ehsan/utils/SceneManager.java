@@ -53,6 +53,7 @@ public class SceneManager {
     //   Constructor   //
     //                 //
     /////////////////////
+
     public SceneManager(Stage stage) {
         this.fxmlMap = new HashMap<>();
         this.cssMap = new HashMap<>();
@@ -71,21 +72,21 @@ public class SceneManager {
         this.primaryCSS = css;
     }
 
-    public SceneManager (Stage stage, Size size) {
+    public SceneManager(Stage stage, Size size) {
         this(stage);
         this.setDefaultSize(size);
     }
 
-    public SceneManager (Stage stage, double height, double width) {
+    public SceneManager(Stage stage, double height, double width) {
         this(stage, new Size(height, width));
     }
 
-    public SceneManager (Stage stage, String css, Size size) {
+    public SceneManager(Stage stage, String css, Size size) {
         this(stage, css);
         this.setDefaultSize(size);
     }
 
-    public SceneManager (Stage stage, String css, double height, double width) {
+    public SceneManager(Stage stage, String css, double height, double width) {
         this(stage, css, new Size(height, width));
     }
 

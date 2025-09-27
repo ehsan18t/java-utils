@@ -42,9 +42,9 @@ public class HelloApplication extends Application {
         // Add Custom Configurations //
         ///////////////////////////////
         // Add Default size for all pages
-        sm.setDefaultSize (new Size(400, 600));
+        sm.setDefaultSize(new Size(400, 600));
         // OR
-        sm.setDefaultSize (400, 600);
+        sm.setDefaultSize(400, 600);
 
         // Add The Scene
         sm.add("home", "/example/hello-view.fxml");
